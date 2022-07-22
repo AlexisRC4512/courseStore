@@ -1,24 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import { CourseContextProvider } from './Context/courseContext';
+import { Course } from './Components/Course';
+import { Routes,Route } from 'react-router-dom';
+import { ShopingCar } from './Components/ShopingCar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route exat path="/" element={<Course/>} />
+      <Route exat path="/cart" element={<ShopingCar/>} />
+    </Routes>
+  
   );
 }
 
